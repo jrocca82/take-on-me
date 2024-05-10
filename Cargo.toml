@@ -1,0 +1,35 @@
+[package]
+name = "aaha-template"
+version = "1.0.0"
+edition = "2021"
+
+[dependencies]
+askama = { git = "https://github.com/djc/askama", rev = "eec57523103e8455961b27c68510c190ed03260d" }
+askama_axum = { git = "https://github.com/djc/askama", rev = "eec57523103e8455961b27c68510c190ed03260d" }
+axum = "0.7"
+tokio = { version = "1", features = ["full"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+tracing-subscriber = "0.3"
+log = "0.4"
+env_logger = "0.11"
+dotenv = "0.15.0"
+tower = { version = "0.4", features = ["util"] }
+tower-http = { version = "0.5.0", features = ["fs", "trace"] }
+memory-serve = "0.4.5"
+once_cell = "1"
+eyre = "0.6"
+thiserror = "1"
+jsonwebtoken = "9"
+uuid = { version = "1", features = ["v4", "fast-rng"] }
+axum_typed_multipart = "0.11.1"
+rand = "0.8.5"
+axum-macros = "0.4.1"
+axum-extra = { version = "0.9.3", features = ["typed-header", "cookie"] }
+sqlx = { version = "0.7", features = ["runtime-tokio", "tls-native-tls", "postgres", "macros", "uuid"] }
+lettre = { version = "0.11", features = ["tokio1", "tokio1-native-tls"] }
+
+[build-dependencies]
+grass = "0.13.2"
+glob = "0.3.1"
+lightningcss = "1.0.0-alpha.55"

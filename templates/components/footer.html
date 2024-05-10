@@ -1,0 +1,26 @@
+<div class="footer">
+  <div class="wrapper">
+    <span
+      class="button"
+      hx-get="/home/content"
+      hx-swap="none"
+      x-data
+      x-on:click="
+        window.history.pushState(null, window.document.title, '/');
+      "
+    >
+      <i class="fa-solid fa-house icon"></i>
+    </span>
+    <span
+      class="button"
+      hx-get="/user/content"
+      hx-swap="none"
+      x-data
+      x-on:click="
+        window.history.pushState(null, window.document.title, '/user');
+      "
+    >
+      <i class="fa-solid fa-user icon"></i>
+    </span>
+  </div>
+</div>
